@@ -22,9 +22,10 @@ PYPROGS=uhd_ra_receiver_new.py iraconfig.py uhd_ra_interferometer.py
 SCRIPTS=ira install_ira
 DESKTOP=Ira.desktop Science.directory
 ICONS=Ira.png science_icon.png
-all: expire version integrated_ra_receiver receiver_start dtracker
+all: expire version integrated_ra_receiver receiver_start dtracker uhd_ra_receiver_new.py
 clean:
 	rm -f *.o integrated_ra_receiver receiver_start exptime makekey installkit send  dtracker *.tar.gz
+	rm -f uhd_ra_receiver_new.py
 integrated_ra_receiver: $(OBJS)
 integrated_ra_receiver_main.o: integrated_ra_receiver_main.c version.h
 receiver_start: $(SOBJS)
@@ -36,6 +37,8 @@ expire: exptime
 	touch license.c
 version:
 	echo "#define VERSION " \"`date +%Y%m%d-%H:%M:%S`-`uname -m`\" >version.h
+uhd_ra_receiver_new.py: uhd_ra_receiver_new.grc
+	grcc -d . uhd_ra_receiver_new.grc
 install:
 	cp ira $(PREFIX)/bin
 	cp uhd_ra_receiver_new.py $(PREFIX)/bin

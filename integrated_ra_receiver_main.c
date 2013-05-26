@@ -200,16 +200,6 @@ int main(int argc, char *argv[])
    fl_free_pixmap_pixmap(fd_receiver_main->ira_xpm_button);
    fl_set_pixmap_data(fd_receiver_main->ira_xpm_button, Ira_xpm);
    
-   /*
-    * Check to make sure that they're licensed to use the software
-	*/
-   if (check_license (license_info) == 0)
-   {
-	   fl_show_form(fd_receiver_lproblem->receiver_lproblem,FL_PLACE_CENTER,FL_FULLBORDER,"IRA License Problem");
-	   while(fl_do_forms())
-         ;
-		exit (1);
-	}
 	sprintf (version_info, "Ver: %s  (BETA)", VERSION);
    
    /*

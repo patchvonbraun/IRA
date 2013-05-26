@@ -212,28 +212,6 @@ function fifos {
 	done
 }
 
-function license_goo {
-	if [ @"$RCVR_LICENSE_KEY"@ = @@ ]
-	then
-		if [ $MENU = True ]
-		then
-			lic=`zenity --title "IRA License" --width 350 --entry --text "IRA License key"`
-			if [ @"$lic"@ != @@ ]
-			then
-				RCVR_LICENSE_KEY="$lic"
-			fi
-		else
-			echo -n License Key:
-			read lic
-			RCVR_LICENSE_KEY="$lic"
-		fi
-		if [ @"$RCVR_LICENSE_KEY"@ != @@ ]
-		then
-			echo "export RCVR_LICENSE_KEY=\"$lic\"" >>$HOME/.rcvr_cfg/rcvr_start_params
-		fi
-	fi
-}
-
 export LANG=en_US.UTF-8
 export LC_NUMERIC=en_US.UTF-8
 
@@ -332,15 +310,10 @@ fi
 #
 if [ -f rcvr_start_params ]
 then
-	. ./rcvr_start_params ]
+	. ./rcvr_start_params 
 fi
 
 starter=true
-
-#
-# Do licensing goop
-#
-license_goo
 
 #
 # Probe for hardware

@@ -1,0 +1,250 @@
+Magic: 14000
+
+Internal Form Definition File
+    (do not change)
+
+Number of forms: 1
+Unit of measure: FL_COORD_PIXEL
+
+=============== FORM ===============
+Name: receiver_start
+Width: 518
+Height: 302
+Number of Objects: 12
+
+--------------------
+class: FL_BOX
+type: UP_BOX
+box: 0 0 518 302
+boxtype: FL_UP_BOX
+colors: FL_INDIANRED FL_COL1
+alignment: FL_ALIGN_BOTTOM|FL_ALIGN_INSIDE
+style: FL_BOLD_STYLE
+size: FL_LARGE_SIZE
+lcol: FL_YELLOW
+label: Integrated RA Receiver Startup
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: receiver_starter
+callback: 
+argument: 
+
+--------------------
+class: FL_BUTTON
+type: NORMAL_BUTTON
+box: 380 10 120 40
+boxtype: FL_EMBOSSED_BOX
+colors: FL_COL1 FL_COL1
+alignment: FL_ALIGN_CENTER
+style: FL_BOLD_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: Start RA Receiver
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: start_button
+callback: start_receiver
+argument: 0
+
+--------------------
+class: FL_TEXT
+type: NORMAL_TEXT
+box: 25 210 450 30
+boxtype: FL_ROUNDED_BOX
+colors: FL_PALEGREEN FL_MCOL
+alignment: FL_ALIGN_LEFT|FL_ALIGN_INSIDE
+style: FL_BOLDITALIC_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: Science Radio Laboratories  http://www.science-radio-labs.com
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: 
+callback: 
+argument: 
+
+--------------------
+class: FL_INPUT
+type: NORMAL_INPUT
+box: 10 140 290 30
+boxtype: FL_EMBOSSED_BOX
+colors: FL_COL1 FL_MCOL
+alignment: FL_ALIGN_BOTTOM
+style: FL_BOLD_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: License Key
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: license_input
+callback: input_license_key
+argument: 0
+return: FL_RETURN_END_CHANGED
+
+--------------------
+class: FL_INPUT
+type: NORMAL_INPUT
+box: 240 80 110 30
+boxtype: FL_EMBOSSED_BOX
+colors: FL_COL1 FL_MCOL
+alignment: FL_ALIGN_BOTTOM
+style: FL_BOLD_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: Longitude
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: longitude_input
+callback: set_longitude
+argument: 0
+return: FL_RETURN_END_CHANGED
+
+--------------------
+class: FL_BUTTON
+type: NORMAL_BUTTON
+box: 420 255 70 30
+boxtype: FL_UP_BOX
+colors: FL_SLATEBLUE FL_COL1
+alignment: FL_ALIGN_CENTER
+style: FL_BOLD_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: HELP
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: help_button
+callback: show_help
+argument: 0
+
+--------------------
+class: FL_CHOICE
+type: NORMAL_CHOICE2
+box: 160 10 90 30
+boxtype: FL_EMBOSSED_BOX
+colors: FL_COL1 FL_BLACK
+alignment: FL_ALIGN_BOTTOM
+style: FL_BOLD_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: RA Mode
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: ra_choice
+callback: set_ra_mode
+argument: 0
+    content: manual
+    mode: FL_PUP_NONE
+    content: transit
+    mode: FL_PUP_NONE
+    content: external
+    mode: FL_PUP_NONE
+    value: 1
+
+--------------------
+class: FL_CHOICE
+type: NORMAL_CHOICE2
+box: 260 10 90 30
+boxtype: FL_EMBOSSED_BOX
+colors: FL_COL1 FL_BLACK
+alignment: FL_ALIGN_BOTTOM
+style: FL_BOLD_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: DEC Mode
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: dec_choice
+callback: set_dec_mode
+argument: 0
+    content: manual
+    content: external
+    value: 1
+
+--------------------
+class: FL_BUTTON
+type: NORMAL_BUTTON
+box: 400 120 100 40
+boxtype: FL_EMBOSSED_BOX
+colors: FL_COL1 FL_COL1
+alignment: FL_ALIGN_CENTER
+style: FL_BOLD_STYLE
+size: FL_MEDIUM_SIZE
+lcol: FL_BLACK
+label: EXIT
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: 
+callback: exit_receiver
+argument: 0
+
+--------------------
+class: FL_CHOICE
+type: NORMAL_CHOICE2
+box: 20 10 130 30
+boxtype: FL_EMBOSSED_BOX
+colors: FL_COL1 FL_BLACK
+alignment: FL_ALIGN_BOTTOM
+style: FL_BOLD_STYLE
+size: FL_MEDIUM_SIZE
+lcol: FL_BLACK
+label: Bandwidth
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: bw_choice
+callback: select_bandwidth
+argument: 0
+
+--------------------
+class: FL_CHOICE
+type: NORMAL_CHOICE2
+box: 20 80 80 30
+boxtype: FL_UP_BOX
+colors: FL_COL1 FL_BLACK
+alignment: FL_ALIGN_BOTTOM
+style: FL_BOLD_STYLE
+size: FL_MEDIUM_SIZE
+lcol: FL_BLACK
+label: Side
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: side_choice
+callback: set_side_choice
+argument: 0
+    content: A
+    content: B
+    value: 1
+
+--------------------
+class: FL_CHOICE
+type: NORMAL_CHOICE2
+box: 110 80 120 30
+boxtype: FL_UP_BOX
+colors: FL_COL1 FL_BLACK
+alignment: FL_ALIGN_BOTTOM
+style: FL_BOLD_STYLE
+size: FL_MEDIUM_SIZE
+lcol: FL_BLACK
+label: Mode
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: rcvr_mode
+callback: select_single
+argument: 0
+    content: single
+    content: interferometer
+    value: 1
+
+==============================
+create_the_forms

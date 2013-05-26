@@ -1,0 +1,553 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Linux)">
+	<META NAME="AUTHOR" CONTENT="Marcus Leech">
+	<META NAME="CREATED" CONTENT="20090316;11341400">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGED" CONTENT="20090509;16505900">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Albany, sans-serif"><FONT SIZE=4>IRA
+Control Panel</FONT></FONT></P>
+<P>The <I>IRA Control Panel</I> controls all aspects of the IRA Radio
+Astronomy and SETI receiver system, once the receiver subsystem has
+been initialized with the <I><A HREF="ira_start.html">IRA Starter</A>
+</I>window.</P>
+<P><BR><BR>
+</P>
+<P><IMG SRC="ira_control.png" NAME="graphics1" ALIGN=LEFT WIDTH=1146 HEIGHT=412 BORDER=0><BR CLEAR=LEFT><BR><BR>
+</P>
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Albany, sans-serif"><FONT SIZE=4 STYLE="font-size: 16pt">Control
+Panel Areas</FONT></FONT></P>
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Albany, sans-serif"><FONT SIZE=3><I>The
+Detector/LMST area</I></FONT></FONT></P>
+<P STYLE="font-style: normal"><FONT SIZE=3>This area shows various
+values of overall interest to the observer:</FONT></P>
+<UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>LMST</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3>The <I>Local Mean
+			Sidereal Time </I>which is the local time-of-day in sidereal time.
+			A sidereal day is shorter than a regular day by approximately 4
+			minutes, which means that the LMST “drifts” relative to the
+			local time.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Runtime</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3>The amount of time
+			the application has been running</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Detector Value</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3>The current
+			<I>continuum</I> detector output value, after <B>DC gain </B>and
+			<B>Offset</B> have been applied.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Peak Value</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3>The current <B>peak
+			</B>value from the <I>continuum</I> detector, after <B>DC gain</B>
+			and <B>Offset</B> have been applied.</FONT></P>
+			<UL>
+				<LI><P STYLE="font-style: normal"><FONT SIZE=3>This value is
+				reset whenever the RF gain, DC gain, or Offset are changed</FONT></P>
+			</UL>
+		</UL>
+	</UL>
+</UL>
+<P><FONT SIZE=3><I>The Pulsar Area</I></FONT></P>
+<P STYLE="font-style: normal"><FONT SIZE=3>The Pulsar area controls
+various aspects of the pulsar display system:</FONT></P>
+<UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Pulsar rate</B> </FONT>
+	</P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3>This input area
+			sets the pulsar observing rate, in Hz. You should use a value that
+			is listed in the Parkes/ATNF pulsar data. Press <B>ENTER </B>in
+			order for the pulsar rate data that you entered to take effect.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Folding Const</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3>This choice control
+			sets the folding constant used in the synchronous detection
+			algorithm. The choices are:</FONT></P>
+			<UL>
+				<LI><P STYLE="font-style: normal"><FONT SIZE=3>5, 10, 15, 20, 25,
+				30</FONT></P>
+			</UL>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>DM</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3>This slider control
+			determines the <I>Dispersion Measure </I>of the observation. It
+			currently doesn't do anything, but in future will allow for
+			coherent de-dispersion. At L-band frequencies and above, over the
+			modest observing bandwidths contemplated by this application, the
+			total time delay due to dispersion is very small, and thus not
+			worth the CPU load of compensating for it.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Delay(ms)</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3>This shows the
+			computed across-the-band dispersion delay based on the given
+			<I>Dispersion Measure</I>.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>PhaseErr</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3>This shows the
+			residual phase/frequency error, based on the configured pulsar
+			sample rate, and the <I>pulsar rate </I>given as input.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Show</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P><FONT SIZE=3><SPAN STYLE="font-style: normal">This control
+			causes the </SPAN></FONT><A HREF="ira_pulsar.html"><FONT SIZE=3><I>Pulsar
+			Pulses</I></FONT> <FONT SIZE=3><SPAN STYLE="font-style: normal">window</SPAN></FONT></A>
+			<FONT SIZE=3><SPAN STYLE="font-style: normal">to be displayed.</SPAN></FONT></P>
+		</UL>
+	</UL>
+</UL>
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Albany, sans-serif"><FONT SIZE=3><I>The
+Transients Area</I></FONT></FONT></P>
+<P STYLE="font-style: normal"><FONT SIZE=3>This area shows any
+recently-detected transients in the detector output. The output shows
+GMT, transient width, and the peak and average strengths of the
+transient.</FONT></P>
+<UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Power Threshold</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3>Slider control sets
+			the relative power threshold used to trigger a Transient detection</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Transient Duration</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3>Slider control sets
+			the duration (in 0.01s increments) used to trigger a Transient
+			detection</FONT></P>
+		</UL>
+	</UL>
+</UL>
+<P><BR><BR>
+</P>
+<P STYLE="font-style: normal"><FONT SIZE=3>Both the <B>Transient
+Duration</B> and <B>Power Threshold</B> conditions must be met in
+order for a transient to be displayed and logged. Note that in <B>split
+</B>mode, a transient is only triggered if the transient appears only
+in the primary beam (A channel) and not the secondary beam (B
+channel), subject to the usual duration and power threshold
+constraints.</FONT></P>
+<P><BR><BR>
+</P>
+<P><FONT SIZE=3><I>Current Declination</I></FONT></P>
+<P STYLE="font-style: normal"><FONT SIZE=3>This area is used to input
+the current observation declination. If the <I>RCVR_DEC_MODE</I>
+environment variable is set to <B>external &lt;filename&gt;</B>, then
+this area is updated automatically from external telescope tracking
+software. When entering data here, remember to press <B>ENTER</B> to
+have the entered declination take effect.</FONT></P>
+<P><FONT SIZE=3><I>Current RA</I></FONT></P>
+<P STYLE="font-style: normal"><FONT SIZE=3>This area shows the
+current right ascension of the observation. If the <I>RCVR_RA_MODE</I>
+environment variable is set to <B>transit,</B> then this area is
+updated automatically to the current LMST. This assumes a
+meridian-transit instrument, aligned on the local meridian. When
+entering data here, remember to press <B>ENTER</B> to have the
+entered right ascension take effect.</FONT></P>
+<P STYLE="font-style: normal"><FONT SIZE=3>If the <I>RCVR_RA_MODE</I>
+environment variable is set to <B>external &lt;filename&gt;</B><SPAN STYLE="font-weight: medium">,
+then this area is updated automatically from external telescope
+tracking software.</SPAN></FONT></P>
+<P STYLE="font-weight: medium"><FONT SIZE=4><I>The RF Controls Area</I></FONT></P>
+<UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Tuner Frequency</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>This
+			input area sets the tuning frequency of the Gnu Radio
+			software/hardware subsystem. The units used in this area are Hz.
+			If the desired tuner frequency is 10.7MHz, then you must enter:
+			10700000 or 10.7e6 into this area. You must press <B>ENTER</B> for
+			the frequency you entered to take effect.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Sky Frequency</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>This
+			is the same as the RF Tuner frequency, unless the Lock control is
+			disabled</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>LOCK</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>When
+			activated (the default), the Sky frequency is the same as the RF
+			Tuner frequency. For situations where a down-converter is used,
+			you may disable the LOCK control, and enter a Sky Frequency. Once
+			set, the Sky Frequency will track the RF Tuner Frequency.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>EXIT</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>This
+			button causes IRA to exit</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>RF Gain</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>This
+			input area sets the RF gain of the Gnu Radio RF software/hardware.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>GC A</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>This
+			input area allows you to enter a gain compensation coefficient for
+			the A channel</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>GC
+	B</FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>This
+			input area allows you to enter a gain compensation coefficient for
+			the B channel</FONT></P>
+		</UL>
+	</UL>
+</UL>
+<P STYLE="font-style: normal; font-weight: medium"><BR><BR>
+</P>
+<P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>Gain
+compensation allows you to bring both the 'A' and 'B' channels into
+relative balance.  It is nearly always the case that there will be a
+small amount of gain imbalance, even in a carefully-design RF signal
+chain.  For <I>split,</I> <I>dual,</I> and <I>interferometer </I>modes,
+it is very helpful for there to be gain balance between the two
+channels.</FONT></P>
+<P><BR><BR>
+</P>
+<P STYLE="font-weight: medium"><FONT SIZE=4><I>The Continuum Controls
+Area</I></FONT></P>
+<UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>DC Gain</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>This
+			control sets the post-detector “DC” gain for continuum
+			observing. Note that this doesn't affect any hardware, and is a
+			software-only feature in SDR-based radios. Changing this control
+			resets the Detector Peak Value field.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Mult.</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>This
+			control sets a fixed multiplier for the DC Gain control. The
+			default is x1, but x5, x10, x15, x20, and x25 are also available
+			as choices. Changing this field resets the Detector Peak Value
+			field.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Offset</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium"><FONT SIZE=3>This
+			control sets the post-detector “DC” offset for continuum
+			observing. Note that this doesn't affect any hardware, and is a
+			software-only feature in SDR-based radios. Changing this control
+			resets the Detector Peak Value field.</FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Integration</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3><SPAN STYLE="font-weight: medium">This
+			slide control sets the </SPAN><I><SPAN STYLE="font-weight: medium">integration
+			time,</SPAN></I> <SPAN STYLE="font-weight: medium">in seconds, for
+			continuum observations.</SPAN></FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Refmult</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal"><FONT SIZE=3><SPAN STYLE="font-weight: medium">This
+			control sets the value of the </SPAN><I><SPAN STYLE="font-weight: medium">reference
+			multiplier,</SPAN></I> <SPAN STYLE="font-weight: medium">when
+			observing in Dicke-switched mode. It is used generally to cause
+			the reference input to be the same as the </SPAN><I><SPAN STYLE="font-weight: medium">cold
+			sky</SPAN></I> <SPAN STYLE="font-weight: medium">input when making
+			observations. An external program is required to enable
+			Dicke-switched mode.</SPAN></FONT></P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><FONT SIZE=3><B>Show</B></FONT></P>
+	<UL>
+		<UL>
+			<LI><P><FONT SIZE=3><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: medium">This
+			causes the <A HREF="ira_continuum.html">Continuum stripchart</A>
+			window to be displayed.</SPAN></SPAN></FONT></P>
+		</UL>
+	</UL>
+</UL>
+<P STYLE="margin-top: 0.17in; font-weight: medium; page-break-after: avoid">
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4><I>The SETI Analysis
+Area</I></FONT></FONT></P>
+<P STYLE="font-style: normal; font-weight: medium">This area is used
+to display and control SETI processing, and display any results
+(“hits”) that have recently occured.</P>
+<UL>
+	<LI><P STYLE="font-style: normal; font-weight: medium">The SETI
+	browser area</P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium">This
+			browser area show recent hits, with:</P>
+			<UL>
+				<LI><P STYLE="font-style: normal; font-weight: medium">Frequency,
+				count, chirp rate, and sigma values for this hit</P>
+			</UL>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><B>Sigma_K</B></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium">This slider
+			control sets the value of 'K' used in determining the threshold
+			for declaring a given FFT bin a “hit”. The lower this value,
+			the more likely that false hits will occur.</P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><B>SETI Integration</B></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium">This sets
+			the integration time, in seconds used in SETI processing. If the
+			telescope is used in tracking mode, the values for this parameter
+			can be set quite high, which will improve sensitivity. For
+			telescope observing schemes in which objects “drift” through
+			the beam, the, integration time should be set to no higher than &frac12;
+			the beam transit time.</P>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><B>Show</B></P>
+	<UL>
+		<UL>
+			<LI><P><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: medium">This
+			causes the <A HREF="ira_waterfall.html">SETI Waterfall</A> window
+			to be displayed.</SPAN></SPAN></P>
+		</UL>
+	</UL>
+</UL>
+<P STYLE="margin-top: 0.17in; font-weight: medium; page-break-after: avoid">
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4><I>The Spectral Analysis
+Area</I></FONT></FONT></P>
+<P STYLE="font-weight: medium">This area controls the operation of
+the “conventional” spectral display, such as might be used on a
+conventional laboratory spectral analyser. There are two controls:</P>
+<UL>
+	<LI><P><B>Spectral Integration</B></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-weight: medium">This control sets the
+			integration time, in seconds, of the spectral display. Setting a
+			high value improves the sensitivity for fixed-frequency signals,
+			but can “smear” signals that are drifting from bin-to-bin.</P>
+		</UL>
+	</UL>
+	<LI><P><B>Show</B></P>
+	<UL>
+		<UL>
+			<LI><P><SPAN STYLE="font-weight: medium">This causes the
+			conventional <A HREF="ira_spectrum.html">spectral display</A>
+			window to be shown.</SPAN></P>
+		</UL>
+	</UL>
+</UL>
+<P STYLE="margin-top: 0.17in; font-weight: medium; page-break-after: avoid">
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4><I>The IRA Button</I></FONT></FONT></P>
+<P><IMG SRC="Ira.png" NAME="graphics2" ALIGN=LEFT WIDTH=93 HEIGHT=64 BORDER=0><BR CLEAR=LEFT><BR><BR>
+</P>
+<P STYLE="font-weight: medium">This button causes some general
+information about IRA to be displayed, including license and version
+information.</P>
+<P><BR><BR>
+</P>
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Albany, sans-serif"><FONT SIZE=4><I>The
+$HOME/astro_data directory</I></FONT></FONT></P>
+<P STYLE="font-style: normal">While the IRA application is running,
+it produces several data files, logging each of the important data
+items:</P>
+<UL>
+	<LI><P STYLE="font-style: normal"><B>Total Power/Continuum</B> 
+	</P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal">Files with names:
+			<I>tp-YYYYMMDDHH.dat</I></P>
+			<UL>
+				<LI><P STYLE="font-style: normal">Short records: <I>HH:MM:SS
+				detector-value</I></P>
+				<UL>
+					<LI><P STYLE="font-style: normal">Current LMST plus the current
+					detector value as a floating point number</P>
+				</UL>
+				<LI><P STYLE="font-style: normal">Long records: HH:MM:SS
+				<I>detector-value</I> <I>Header-info</I></P>
+				<UL>
+					<LI><P STYLE="font-style: normal">Header-info is produced every
+					10 seconds</P>
+					<UL>
+						<LI><P><SPAN STYLE="font-style: normal">Dn</SPAN><I>=Declination,</I><SPAN STYLE="font-style: normal">Ra</SPAN><I>=Right-Ascension,</I><SPAN STYLE="font-style: normal">Ti</SPAN><I>=integration-time,</I><SPAN STYLE="font-style: normal">Fc</SPAN><I>=RF-center-frequency,</I><SPAN STYLE="font-style: normal">Bw</SPAN><I>=RF-bandwidth,</I><SPAN STYLE="font-style: normal">Ga</SPAN><I>=RF-gain</I></P>
+					</UL>
+				</UL>
+				<LI><P STYLE="font-style: normal">If a secondary beam is in use
+				(“<B>split</B>” mode), then there will also be files of the
+				form: <I>tp2-YYYYMMDDHH.dat </I>with an identical format to the
+				primary-beam total-power files.</P>
+			</UL>
+		</UL>
+	</UL>
+	<LI><P><B>Spectral</B></P>
+	<UL>
+		<UL>
+			<LI><P>Files with names: spec-YYYYMMDDHH.dat</P>
+			<UL>
+				<LI><P>Records: <A HREF="data:HH:MM:SS">data:HH:MM:SS</A>
+				Header-info [ 6000 floating-point values spread across multiple
+				lines ]</P>
+			</UL>
+			<LI><P>Produced every 15 seconds</P>
+			<UL>
+				<LI><P>Spectral size is fixed at 6000 bins</P>
+			</UL>
+		</UL>
+	</UL>
+	<LI><P><B>SETI</B></P>
+	<UL>
+		<UL>
+			<LI><P>Files with names: seti-YYYYMMDDHH.dat</P>
+			<UL>
+				<LI><P>Records: <I>HH:MM:SS declination right-ascension
+				center-frequency count chirp-rate sigma(s)</I></P>
+			</UL>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><B>Transients</B></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal">File with names:
+			trns-YYYYMMDDHH.dat</P>
+			<UL>
+				<LI><P STYLE="font-style: normal">Records: <I>HH:MM:SS
+				declination right-ascension center-frequency bandwidth HH:MM:SS
+				width strength [ profile ] + { profile }</I></P>
+				<UL>
+					<LI><P STYLE="font-style: normal">HH:MM:SS on the end of the
+					record is GMT <SPAN STYLE="font-weight: medium">time.</SPAN></P>
+					<LI><P STYLE="font-style: normal"><SPAN STYLE="font-weight: medium">The
+					</SPAN><I><SPAN STYLE="font-weight: medium">width</SPAN></I>
+					<SPAN STYLE="font-weight: medium">parameter is the width of the
+					pulse in samples at 100Hz sampling</SPAN></P>
+					<LI><P STYLE="font-style: normal"><SPAN STYLE="font-weight: medium">The
+					</SPAN><I><SPAN STYLE="font-weight: medium">strength </SPAN></I><SPAN STYLE="font-weight: medium">parameter
+					gives the relative strength of the transient, compared to the
+					surround averaged data.</SPAN></P>
+					<LI><P STYLE="font-style: normal; font-weight: medium">The
+					primary transient profile is logged between '[' and ']' and is a
+					list of floating-point numbers.</P>
+					<UL>
+						<LI><P STYLE="font-style: normal; font-weight: medium">Lines
+						are split every 8 values</P>
+					</UL>
+					<LI><P STYLE="font-style: normal; font-weight: medium">If a
+					secondary beam is in use (“<B>split</B>” mode), then the
+					profile of the secondary beam detection, over the same time
+					period, will appear after a '+' between braces '{' and '}'</P>
+				</UL>
+			</UL>
+		</UL>
+	</UL>
+	<LI><P STYLE="font-style: normal"><B>Pulsar</B></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal; font-weight: medium">File with
+			names: psr-YYYYMMDDHH.dat</P>
+			<UL>
+				<LI><P STYLE="font-style: normal"><SPAN STYLE="font-weight: medium">Records:
+				</SPAN><I><SPAN STYLE="font-weight: medium">HH:MM:SS declination
+				right-ascension center-frequency bandwidth pulsar-rate
+				pulsar-sample-rate [ pulse profile ]</SPAN></I></P>
+				<UL>
+					<LI><P STYLE="font-style: normal; font-weight: medium">pulsar-rate
+					is the pulse rate, in Hz of the observed pulsar</P>
+					<LI><P STYLE="font-style: normal; font-weight: medium">pulsar-sample-rate
+					is the sampling rate in use at the time of the observation, in
+					Hz</P>
+					<LI><P STYLE="font-style: normal; font-weight: medium">The pulse
+					profile is given between '[' and ']' symbols, similar to the
+					Transient profile</P>
+					<UL>
+						<LI><P STYLE="font-style: normal; font-weight: medium">Lines
+						are split every 8 values</P>
+					</UL>
+				</UL>
+			</UL>
+		</UL>
+	</UL>
+</UL>
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Albany, sans-serif"><FONT SIZE=4>General
+Information about IRA and observing considerations</FONT></FONT></P>
+<P><A HREF="ira_general.html">See here for general information</A></P>
+</BODY>
+</HTML>

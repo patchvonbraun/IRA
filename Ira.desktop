@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=IRA Radio Astronomy Receiver
+Comment=An Integrated SDR System for Radio Astronomy
+Exec=ira Menu
+Icon=Ira
+Terminal=false
+Type=Application
+Encoding=UTF-8
+X-Desktop-File-Install-Version=0.3
+Categories=Graphics;Application;X-Red-Hat-Extras;

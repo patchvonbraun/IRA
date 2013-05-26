@@ -1,0 +1,70 @@
+	if [ $RCVR_HW_TYPE != none ]
+	then
+		if grep -q WBX tmp$$
+		then
+			F_LOW=50.0e6
+			F_HIGH=2.2e9
+			RCVR_CARD="WBX"
+		fi
+		if grep -q DBS".*RX" tmp$$
+		then
+			F_LOW=900e6
+			F_HIGH=2.25e9
+			RCVR_CARD="DBSRX"
+		fi
+		if grep -q TV".*RX" tmp$$
+		then
+			F_LOW=50e6
+			F_HIGH=860e6
+			RCVR_CARD="TVRX"
+		fi
+		if grep -q SBX tmp$$
+		then
+			F_LOW=400e6
+			F_HIGH=4.4e9
+			RCVR_CARD="SBX"
+		fi
+		if grep -q RFX900 tmp$$
+		then
+			F_LOW=800.0e6
+			F_HIGH=1.0e9
+			RCVR_CARD="RFX900"
+		fi
+		if grep -q RFX1200 tmp$$
+		then
+			F_LOW=1.15e9
+			F_HIGH=1.45e9
+			RCVR_CARD="RFX1200"
+		fi
+		if grep -q RFX1800 tmp$$
+		then
+			F_LOW=1.5e9
+			F_HIGH=2.05e9
+			RCVR_CARD="RFX1800"
+		fi
+		if grep -q RFX2400 tmp$$
+		then
+			F_LOW=2.3e9
+			F_HIGH=2.9e9
+			RCVR_CARD="RFX2400"
+		fi
+		if grep -q "Basic RX" tmp$$
+		then
+			F_LOW=1.0e6
+			F_HIGH=50.0e6
+			RCVR_CARD="BASICRX"
+			if [ $RCVR_HW_TYPE = USRP1 ]
+			then
+				F_LOW=1.0e6
+				F_HIGH=32.0e6
+			fi
+		fi
+		if grep -q "LF RX" tmp$$
+		then
+			F_LOW=1.0e6
+			F_HIGH=30.0e6
+			RCVR_CARD="LFRX"
+		fi
+		export F_LOW
+		export F_HIGH
+	fi

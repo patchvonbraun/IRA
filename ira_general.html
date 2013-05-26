@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.3  (Linux)">
+	<META NAME="AUTHOR" CONTENT="Marcus Leech">
+	<META NAME="CREATED" CONTENT="20090414;20595300">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGED" CONTENT="20090415;18181600">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Albany, sans-serif"><FONT SIZE=4><I>IRA
+</I>General Information</FONT></FONT></P>
+<P>IRA is a general-purpose receiver platform for conducting radio
+astronomy observations of several types:</P>
+<UL>
+	<LI><P><I>Continuum</I> (Total Power) both single and dual-beam</P>
+	<UL>
+		<UL>
+			<LI><P>Primary and secondary total power data logged once per
+			second to external file</P>
+		</UL>
+	</UL>
+	<LI><P><I>Spectral </I><SPAN STYLE="font-style: normal">similiar to
+	a laboratory spectrum analyser, but tailored for radio astronomy use</SPAN></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal">Includes ability to set discrete
+			notch filters via simple user interface</P>
+			<LI><P STYLE="font-style: normal">Spot frequencies can be easily
+			displayed along with computed relative velocity, and relative
+			power</P>
+			<LI><P STYLE="font-style: normal">High-resolution (6000 bins)
+			spectra logged every 20 seconds to external file</P>
+			<LI><P><SPAN STYLE="font-style: normal">Current spectral display
+			can be copied into external </SPAN><I>PostScript </I><SPAN STYLE="font-style: normal">file.</SPAN></P>
+		</UL>
+	</UL>
+	<LI><P><I>Transients </I><SPAN STYLE="font-style: normal">can detect
+	strong transients in the post-detector data for both primary and
+	secondary beam</SPAN></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal">User-settable trigger thresholds</P>
+			<LI><P><SPAN STYLE="font-style: normal">With dual-beam (split)
+			mode, can perform transient </SPAN><I>validation</I><SPAN STYLE="font-style: normal">.</SPAN></P>
+			<LI><P STYLE="font-style: normal">Transients are logged when
+			detected, including profile of the transient pulse shape</P>
+		</UL>
+	</UL>
+	<LI><P><I>Pulsars </I><SPAN STYLE="font-style: normal">can be used
+	to monitor pulsars, using flexible </SPAN><I>folding</I> <SPAN STYLE="font-style: normal">mechanism,
+	and high-quality pulse profile display.</SPAN></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal">User-settable pulse repetition
+			rate, and folding parameters</P>
+			<LI><P><SPAN STYLE="font-style: normal">Can copy current pulse
+			profile to </SPAN><I>PostScript</I> <SPAN STYLE="font-style: normal">file.</SPAN></P>
+			<LI><P STYLE="font-style: normal">Pulsar pulse profiles are logged
+			to an external file every 15 seconds</P>
+		</UL>
+	</UL>
+	<LI><P><I>SETI </I><SPAN STYLE="font-style: normal">a
+	high-performance SETI detectiion engine can perform SETI searches
+	over the entire input bandwidth (250KHz up to 16MHz, depending on
+	available resources)</SPAN></P>
+	<UL>
+		<UL>
+			<LI><P STYLE="font-style: normal">User settable values for
+			integration times and the 'K' constant</P>
+			<LI><P STYLE="font-style: normal">Accompanying waterfall display
+			allows flexibility in display</P>
+			<LI><P STYLE="font-style: normal">Waterfall display can be copied
+			to an external XPM file</P>
+		</UL>
+	</UL>
+</UL>
+<P STYLE="margin-top: 0.17in; font-style: normal; page-break-after: avoid">
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4>System Requirements</FONT></FONT></P>
+<P><SPAN STYLE="font-style: normal">IRA requires a modern Linux
+platform to run on, </SPAN><I>Science Radio Laboratories</I>
+<SPAN STYLE="font-style: normal">(<A HREF="http://www.science-radio-labs.com/">http://www.science-radio-labs.com</A>)
+currently offers software installation “kits” for:</SPAN></P>
+<UL>
+	<LI><P STYLE="font-style: normal">Fedora 8,9,10</P>
+	<LI><P STYLE="font-style: normal">Ubuntu 8.10</P>
+</UL>
+<P><SPAN STYLE="font-style: normal">The available compute and memory
+resources will determine the maximum available observing bandwidth
+for use with </SPAN><I>IRA.</I></P>
+<UL>
+	<LI><P STYLE="font-style: normal">A minimum of 1GB of memory is
+	required, with 2GB or 4GB providing more flexibility</P>
+	<LI><P STYLE="font-style: normal">Single-CPU systems of at least
+	2.4GHz</P>
+	<LI><P STYLE="font-style: normal">Multi-CPU systems are preferred
+	(Pentium D 9XX, Core 2 Duo, Core 2 Quad, Core i7, AMD Athlon X2
+	(7550 7750, etc), AMD Phenom)</P>
+	<LI><P STYLE="font-style: normal">A typical single-CPU system at
+	2.4GHz can usually handle 1 to 2MHz of input bandwidth on a single
+	channel</P>
+	<LI><P STYLE="font-style: normal">A Core 2 Q6600 with at least 6GB
+	of memory can handle a single-channel at 16MHz, and dual-channels up
+	to 6.4MHz</P>
+</UL>
+<P STYLE="font-style: normal">A recent install of <I>Gnu Radio</I> is
+also required—see <A HREF="http://www.gnuradio.org/">http://www.gnuradio.org</A>
+for build and installation instructions.  IRA requires access to a
+source tree, since it makes some minor customizations to <I>Gnu Radio</I>
+to facilitate IRA performance.</P>
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Albany, sans-serif"><FONT SIZE=4>Other
+Hardware Requirements</FONT></FONT></P>
+<P><I>IRA </I>requires a USRP1 (<A HREF="http://www.ettus.com/">http://www.ettus.com</A>)
+for its radio interface, along with the daughter-card(s) that are
+appropriate for the operating frequencies. The DBS_RX, for example,
+allows observing over the 950MHz to 2300Mhz frequency range, which
+happens to include both the <I>Hydrogen line</I>, and several of the
+<I>Hydroxyl</I> lines. The TV_RX card allows observing in the 50MHz
+to 800Mhz region. A high-quality USB cable rated for USB 2.0 use is
+required between the USRP1 and the computer platform.</P>
+<P>In some circumstances an external down-converter can be used, with
+the IF output from the down-converter feeding a BASIC_RX or LF_RX
+card. Several modern all-band receivers have wide IF outputs that
+allow them to be used to down-convert UHF and microwave frequencies
+to 10.7MHz or some other intermediate frequency that is in range for
+the BASIC_RX and LF_RX cards (approximately 100Hz to 30Mhz). It is
+<I>vitally important </I><SPAN STYLE="font-style: normal">that the
+down-converter has a feature that disables </SPAN><I>Automatic Gain
+Control</I> <SPAN STYLE="font-style: normal">(AGC). Without the
+ability to disable AGC, radio astronomy </SPAN><I>continuum</I>
+<SPAN STYLE="font-style: normal">observations cannot be usefully
+conducted, since the down-converter/receiver will tend to
+compress-out any slight variations in received signal power (which is
+precisely what a </SPAN><I>continuum</I> <SPAN STYLE="font-style: normal">observation
+is all about).</SPAN></P>
+<P STYLE="margin-top: 0.17in; font-style: normal; page-break-after: avoid">
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4>Antenna Requirements</FONT></FONT></P>
+<P><SPAN STYLE="font-style: normal">The type and size of antenna
+required for successful observations is determined largely by the
+types of observations that are to be performed. Solar observations at
+UHF frequencies and higher, for example, can usually be conducted
+using smaller parabolic-dish antennas. For example, at 12GHz, using a
+standard TVRO </SPAN><I>Low Noise Block Down-converter Feed-horn</I>
+<SPAN STYLE="font-style: normal">(LNBF), successful solar
+observations can be conducted using a dish of approximately 60cm
+diameter, at lower frequencies a larger dish is required, since the
+thermal component of the solar radio noise increases with increasing
+frequency.</SPAN></P>
+<P><SPAN STYLE="font-style: normal">For observing weaker sources,
+including pulsars, spectral lines, etc, larger antennas are required.
+For example at 21cm, the </SPAN><I>Hydrogen Line </I><SPAN STYLE="font-style: normal">can
+be observed using a dish of as little as 1.3M diameter, while sources
+such as </SPAN><I>Cygnus A, Casseopia A, Sagittarius A</I> <SPAN STYLE="font-style: normal">require
+a dish of at least 2 to 2.5M diameter.</SPAN></P>
+<P STYLE="font-style: normal">For pulsars at low UHF frequencies
+(300MHz to 500Mhz), a dish of at least 3.8M diameter is required to
+successfully observe a handful of the most powerful pulsars.</P>
+<P STYLE="margin-top: 0.17in; font-style: normal; page-break-after: avoid">
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4>Observing Site
+Requirements</FONT></FONT></P>
+<P STYLE="font-style: normal">Just as optical astronomical
+observations require clear access to the sky, so do radio
+observations. Trees, hills, buildings, and other obstructions will
+completely block most of the radio waves that are arriving from the
+cosmos. It is important, therefore to choose an observing site that
+is clear of obstructions, to within at least 20 degrees of the
+horizon, but less horizon blockage is always better!</P>
+<P><SPAN STYLE="font-style: normal">Most observations cannot be
+conducted within large built-up areas such as large cities, due to
+the overwhelming amount of local-produced </SPAN><I>Radio Frequency
+Interference </I><SPAN STYLE="font-style: normal">(RFI). It is
+sometimes possible to conduct observations at the higher microwave
+frequencies (4GHz and higher) from within a built-up area, but
+generally over a smaller section of sky, that avoids local
+terrestrial interference sources.</SPAN></P>
+<P><SPAN STYLE="font-style: normal">Your observing site should have
+stable power, both for the computer, and the USRP. For some types of
+instruments, such as a </SPAN><I>Meridian Transit</I> <SPAN STYLE="font-style: normal">radio
+telescope, observations may be conducted over very long time
+periods--having a power failure interrupt such an observing “run”
+can be very frustrating.</SPAN></P>
+<P STYLE="margin-top: 0.17in; font-style: normal; page-break-after: avoid">
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4>Other things to consider</FONT></FONT></P>
+<P><I>Front-end Gain and noise figure</I></P>
+<P><SPAN STYLE="font-style: normal">It is typically the case that the
+receiving apparatus (USRP and computer) are located at some distance
+from the dish itself (indeed, proper RFI hygiene virtually </SPAN><I>commands</I>
+<SPAN STYLE="font-style: normal">that this be so). For this reason,
+the gain of the </SPAN><I>low-noise amplifier</I> <SPAN STYLE="font-style: normal">(LNA)
+chain out at the antenna needs to be able to adequately compensate
+for RF cable loss between the antenna and other receiving apparatus.
+Typically, amplifiers with gain totalling 25dB or more are used in
+situations with long cable runs.</SPAN></P>
+<P><SPAN STYLE="font-style: normal">Since the signals arriving from
+the cosmos are </SPAN><I>extremely weak,</I> <SPAN STYLE="font-style: normal">it
+is important that the first gain stage in the receiving system
+(whether an LNA or an LNBF) have a very low </SPAN><I>noise figure</I><SPAN STYLE="font-style: normal">.
+Noise figures below roughly 0.8dB provide acceptable performance.
+Sometimes the performance of a low-noise device is quoted in terms of
+</SPAN><I>noise temperature.</I> <SPAN STYLE="font-style: normal">In
+this case, temperatures below roughly 60K are considered adequate for
+radio astronomy observations for small observatories. Very often
+manufacturers will quote a noise temperature that seems impossibly
+low—they'll quote the lowest temperature they were able to achieve
+in the lab, rather than the typical or average temperature. If a
+device manufacturer claims a noise temperature below 25K, it is very
+likely that “typical” devices will have a noise temperature 8-15K
+higher.</SPAN></P>
+<P><I>Gain stability</I></P>
+<P STYLE="font-style: normal">Apart from the noise issues, and the
+overall gain issues there is another <B>extremely important</B> issue
+when considering front-end hardware for a small radio observatory.
+The overall system stability, in terms of gain or detected signal
+strength determines the quality and reliability of observations made
+of the weaker sources. Indeed, the variation in gain of a system can
+often exceed the detector variation caused by a source! The two
+factors that dominate gain stability in low-noise amplifiers are
+power-supply stability, and temperature stability.</P>
+<P STYLE="font-style: normal">Ensure that whatever power-supply is
+being used for the front-end components (LNAs and line amplifiers) is
+very, very stable. Use a supply that is larger than is required for
+the anticipated load, by a factor of three or four. Generally,
+linear-regulated power supplies, with large filter capacitors are
+preferred over switching power supplies, which tend to produce
+unwanted RF noise.</P>
+<P STYLE="font-style: normal">If possible, the front-end electronics
+should be mounted to a heavy aluminum plate, with the entire
+assembly, including the feed-horn(s) enclosed in an insulated
+enclosure. White polystyrene foam of 22mm or greater thickness is an
+excellent material for this purpose. Polystyrene foam is also quite
+transparent to most RF, so it can be safely used <B>in front </B>of
+the feed-horn. Packing the spaces inside the enclosure with loose
+polystyrene packing material can also help with thermal stability of
+the front end.</P>
+<P STYLE="font-style: normal">In some circumstances, active thermal
+control of the entire front-end can be used to achieve excellent
+system gain stability, at a cost of adding complexity to an already
+complex system. Both heating and cooling systems can be considered.
+Heaters, for example, are easier to use, and if actively controlled
+with a temperature set-point a few degrees above the
+seasonally-adjusted ambient temperature, they can be very useful.
+Heating <B>does</B> add a small penalty in noise figure, but if you
+start out with an already-excellent noise temperature, it will only
+be degraded <B>very slightly</B> by using a heater to stabilize the
+LNA temperature above ambient by a few degrees.</P>
+<P><I>Feed-line loss</I></P>
+<P STYLE="font-style: normal">Feed-lines are lossy, more so at higher
+frequencies than lower frequencies. Keep the feed-lines as short as
+is practical, and consider burying them, to improve their temperature
+stability. It is the  case that feed-line loss factors change with
+temperature, so stabilizing the temperature of your feed-line, by
+burying it, can be a very wise investment.</P>
+<P><SPAN STYLE="font-style: normal">With adequate consideration given
+to weather-proofing, the USRP system can be moved out to the antenna
+itself, drastically reducing the amount of feed-line (and therefore,
+loss) that must be used. Systems using this technique must use a
+USB-2.0 extender. Contact <A HREF="mailto:sales@science-radio-labs.com">sales@science-radio-labs.com</A>
+for more information about our recommended USB-2.0 extender, and its
+limitations.</SPAN></P>
+<P><I>Lightning Protection</I></P>
+<P STYLE="font-style: normal">In many parts of the world, lightning
+is hazard that must be considered when designing an observing system.
+If RG-6 feed-lines are used, high-quality in-line lightning arrestors
+are available from nearly-any do-it-yourself TVRO satellite store,
+and there are a number of such stores that have on-line ordering
+available. These units are rugged, and can asborb a large number of
+induced-current “hits” without needing to be replaced.
+Furthermore, they're usually available for under USD$5.00 each.</P>
+</BODY>
+</HTML>

@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (Unix)">
+	<META NAME="AUTHOR" CONTENT="Marcus Leech">
+	<META NAME="CREATED" CONTENT="20090316;11131100">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGED" CONTENT="20110608;21135800">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<META NAME="CHANGEDBY" CONTENT="Marcus Leech">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 0.79in }
+		H1 { margin-bottom: 0.08in }
+		H1.western { font-family: "Liberation Sans", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "DejaVu LGC Sans"; font-size: 16pt }
+		H1.ctl { font-family: "DejaVu LGC Sans"; font-size: 16pt }
+		P { margin-bottom: 0.08in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1 CLASS="western">The IRA Starter Window</H1>
+<P>The IRA Starter window is used to set parameters for the Gnu Radio
+receiver subsystem, then start the main IRA application.</P>
+<P><IMG SRC="IRA_Start.png" NAME="graphics1" ALIGN=LEFT WIDTH=516 HEIGHT=309 BORDER=0><BR CLEAR=LEFT><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<H1 CLASS="western">Bandwidth</H1>
+<P>This control is used to set the desired observing bandwidth (and
+thus, the underlying sampling rate) for the receiver subsystem.</P>
+<P>The choices for a USRP1 are:</P>
+<P><BR><BR>
+</P>
+<UL>
+	<LI><P>250KHz</P>
+	<LI><P>500KHz</P>
+	<LI><P>1MHz</P>
+	<LI><P>2MHz</P>
+	<LI><P>3.2Mhz</P>
+	<LI><P>4MHz</P>
+	<LI><P>6.4MHz</P>
+	<LI><P>8MHz</P>
+	<LI><P>16MHz</P>
+</UL>
+<P>The choices for a USRP2/N2XX are:</P>
+<UL>
+	<LI><P>250KHz</P>
+	<LI><P>500Khz</P>
+	<LI><P>1Mhz</P>
+	<LI><P>2MHz</P>
+	<LI><P>2.5Mhz</P>
+	<LI><P>5MHz</P>
+	<LI><P>10MHz</P>
+	<LI><P>16.67MHz</P>
+	<LI><P>25MHz</P>
+</UL>
+<P>You should pick a bandwidth that is compatible both with your
+observing regime, and the compute power available to you. For
+example, a dual-CPU Pentium D 925 system running at 3.2GHz can
+observe a single channel at 4 to 5MHz bandwidth, with only occasional
+buffer overruns from Gnu Radio.</P>
+<P>A more modern, multi-core system running at 3.5GHz can handle a
+10MHz to 25MHz stream.</P>
+<H1 CLASS="western">Longitude</H1>
+<P>This input area allows you to enter your local longitude, which is
+required in calculating your local mean sidereal time (LMST). Use
+decimal format, with negative values used to indicate longitudes that
+are WEST of the prime meridian. For example, -63.500 is 63 degrees,
+30 minutes WEST longitude, while 63.50 is 63 degrees, 30 minutes EAST
+longitude. Remember to press <B>ENTER</B> to have the entered
+longitude take effect.</P>
+<P STYLE="margin-top: 0.17in; margin-bottom: 0.2in; page-break-after: avoid">
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4><B>RA MODE</B></FONT></FONT></P>
+<P>This choice control sets the mode used to determine RA (Right
+Ascension) during an observation run with IRA. The choices are:</P>
+<UL>
+	<LI><P>manual</P>
+	<UL>
+		<UL>
+			<LI><P>RA is input manually in the RA input area of the IRA
+			control panel</P>
+		</UL>
+	</UL>
+	<LI><P>transit</P>
+	<UL>
+		<UL>
+			<LI><P>The RA is set dynamically to the current LMST—which is
+			useful for instruments set up in meridian transit mode, in which
+			the azimuth axis is fixed on a line that runs exactly NORTH-SOUTH
+			through the axis of the dish, and only the declination (elevation)
+			axis is movable.</P>
+		</UL>
+	</UL>
+	<LI><P>external</P>
+	<UL>
+		<UL>
+			<LI><P>This mode allows IRA to get RA (Right Ascension)
+			information from an external file. When this choice is selected, a
+			file browser will pop-up, to allow you to select a file from which
+			RA information is determined dynamically. While operating in this
+			mode, IRA will inspect the selected file once per second to
+			determine current RA information. This allows external tracking
+			and telescope control software to control the antenna, while
+			informing the receiver where the antenna is pointed.</P>
+		</UL>
+	</UL>
+</UL>
+<P STYLE="margin-top: 0.17in; margin-bottom: 0.2in; page-break-after: avoid">
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4><B>DEC MODE</B></FONT></FONT></P>
+<P>This choice control sets the mode used to determine DEC
+(Declination) during and observation run with IRA. The choices are:</P>
+<UL>
+	<LI><P>manual</P>
+	<UL>
+		<UL>
+			<LI><P>DEC is input manually in the DEC input area of the IRA
+			control panel</P>
+		</UL>
+	</UL>
+	<LI><P>external</P>
+</UL>
+<UL>
+	<UL>
+		<UL>
+			<LI><P>This mode allows IRA to get DEC (Declination) information
+			from an external file. When this choice is selected, a file
+			browser will pop-up, to allow you to select a file from which DEC
+			information is determined dynamically. While operating in this
+			mode, IRA will inspect the selected file once per second to
+			determine current DEC information. This allows external tracking
+			and telescope control software to control the antenna, while
+			informing the receiver where the antenna is pointed.</P>
+		</UL>
+	</UL>
+</UL>
+<P><BR><BR>
+</P>
+<H1 CLASS="western">License Key</H1>
+<P>This input area is used to enter your license key. If you don't
+have a license key, the software will automatically expire
+approximately 30 days after you receive it. If you don't have a
+license key, enter the word “none” in this area. Remember to
+press <B>ENTER</B> to have the entered license key data take effect.</P>
+<P STYLE="margin-top: 0.17in; margin-bottom: 0.2in; page-break-after: avoid">
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4><B>START RA RECEIVER</B></FONT></FONT></P>
+<P>This button control causes the IRA main control panel to start,
+and this starter panel to be closed. The IRA control panel will use
+the parameters provided in the startup panel.</P>
+<P><BR><BR>
+</P>
+<P STYLE="margin-top: 0.17in; margin-bottom: 0.2in; page-break-after: avoid">
+<FONT FACE="Albany, sans-serif"><FONT SIZE=4><B>EXIT</B></FONT></FONT></P>
+<P STYLE="font-weight: normal">This button control allows you to exit
+the IRA starter, without causing the IRA main control panel to start.
+This is useful for changing stored settings, without starting the IRA
+main control panel.</P>
+<P><BR><BR>
+</P>
+<H1 CLASS="western">HELP</H1>
+<P>This document is displayed in the Firefox browser, when you press
+this button.</P>
+</BODY>
+</HTML>

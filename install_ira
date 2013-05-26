@@ -1,0 +1,100 @@
+#!/bin/sh
+
+if which uhd_usrp_probe >/dev/null 2>&1 
+then
+	foo=bar
+else
+	echo You do not appear to have Gnu Radio with UHD installed
+	exit
+fi
+
+cat <<!EOF!
+Copyright (c) 2009 Marcus Leech and Science Radio Laboratories.  
+  All rights reserved.
+
+You may not re-distribute this software, nor make it available for 
+  re-distribution, without the explicit, written, consent of
+  Science Radio Laboratories.
+  
+You may modify the software to suit your needs, but you cannot
+  re-distribute the resulting software to anyone, nor make it available
+  for re-distribution.
+
+You may not give your license keys (if any) to anyone else.
+  
+It is recommended that you keep a copy of your license key in a
+  safe place.
+  
+This license is non-transferrable.
+
+Free evaluation copies of this software may be obtained by sending an
+  e-mail to:  sales@science-radio-labs.com
+  
+ 
+!EOF!
+echo -n If you agree to these terms, enter YES or Y:
+read ans
+if [ @$ans@ != @Y@ -a @$ans@ != @YES@ ]
+then
+	echo Terminating installation of IRA
+	exit
+fi
+echo Proceeding with installation of IRA
+echo SUDO ACCESS IS REQUIRED TO PROCEED
+echo -n DO YOU HAVE SUDO ACCESS/PRIVILEGES'?':
+read ans
+case $ans in
+	yes|y|Y|YES)
+		;;
+	no|n|N|NO)
+		echo YOU NEED TO EDIT /etc/sudoers, then re-start this script
+		exit
+esac
+isubuntu=false
+isfedora=false
+if [ -f /etc/fedora-release ]
+then
+	isfedora=true
+fi
+if [ -f /etc/lsb-release ]
+then
+	isubuntu=true
+fi
+
+echo Installing XForms libraries and tools
+if [ $isfedora = true ]
+then
+	sudo yum -y install xforms "xforms*"
+	sudo yum -y install "xorg-x11-fonts*"
+elif [ $isubuntu = true ]
+then
+	sudo apt-get install libforms-dev libforms-bin
+fi
+
+PREFIX=/usr/local
+echo The current install prefix is $PREFIX
+echo You can optionally change it to /usr
+echo -n would you like to change it to /usr ?
+read ans
+case $ans in
+	y|Y|yes|YES)
+		PREFIX=/usr
+		;;
+esac
+
+if [ ! -d ${PREFIX}/doc ]
+then
+	sudo mkdir ${PREFIX}/doc
+	sudo chmod 755 ${PREFIX}/doc
+fi
+if [ ! -d ${PREFIX}/share/doc/ira ]
+then
+	sudo mkdir ${PREFIX}/share/doc/ira
+	sudo chmod 755 ${PREFIX}/share/doc/ira
+fi
+
+sudo make PREFIX=$PREFIX install
+
+cd $HOME
+
+echo Done installation

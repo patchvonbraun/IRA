@@ -1,0 +1,181 @@
+#!/bin/sh
+#
+#
+# Startup script for IRA  Integrated Radio Astronomy system
+#
+# 
+export LANG=en_US.UTF-8
+export LC_NUMERIC=en_US.UTF-8
+
+#
+# Setup PATH
+#
+PATH=$PATH:/usr/local/bin
+
+#
+# Setup PYTHONPATH
+#
+type=`uname -p`
+if [ $type == "x86_64" ]
+then
+        PYTHONPATH=/usr/local/lib64/python2.5/site-packages
+else
+        PYTHONPATH=/usr/local/lib/python2.5/site-packages
+fi
+export PYTHONPATH
+
+
+#
+# Create .rcvr_cfg if necessary
+#
+if [ ! -d $HOME/.rcvr_cfg ]
+then
+	mkdir $HOME/.rcvr_cfg
+fi
+
+cd $HOME/.rcvr_cfg
+
+#
+# Blow away core files
+#
+rm -f core.*
+
+#
+# Blow away existing FIFO files
+#
+rm -f ra_*fifo gr_*fifo
+
+#
+# Make fresh ones!
+#
+for fifo in ra_tp_fifo ra_seti_fifo ra_spec_fifo ra_psr_fifo gr_control_fifo ra_inter_fifo
+do
+	mkfifo $fifo
+done
+
+#
+# Get defaults
+#
+export RCVR_DATA_DIR=$HOME/astro_data
+export RCVR_INITIAL_FREQ=1420.4058e6
+export RCVR_RF_GAIN=65
+export RCVR_DC_GAIN=5
+export RCVR_DC_OFFSET=0
+export RCVR_DECLINATION=-15.0
+export RCVR_TP_INTEG=15
+export RCVR_SPEC_INTEG=30
+export RCVR_LONGITUDE=-76.02
+export RCVR_SETI_SIZE=4000000
+export RCVR_TP_RATE=100
+export RCVR_PSR_RATE=10000
+export RCVR_SPEC_FFTSIZE=2048
+export RCVR_SETI_INTEG=45
+export RCVR_SIGMA_K=2.75
+export RCVR_REF_MULT=1.0
+export RCVR_MODE=single
+export RCVR_LICENSE_KEY="none"
+export RCVR_BANDWIDTH=$RCVR_SETI_SIZE
+export RCVR_SIDE=A
+export RCVR_COR_A=1.0
+export RCVR_COR_B=1.0
+export RCVR_NOTCH_SIZE=128
+export RCVR_NOTCHES="1.0"
+
+ulimit -c 2000000
+
+#
+# Get previous settings
+#
+if [ -f rcvr_param.pdump ]
+then
+	. ./rcvr_param.pdump
+fi
+
+#
+# Get previous startup settings
+#
+if [ -f rcvr_start_params ]
+then
+	. ./rcvr_start_params ]
+fi
+starter=true
+newkey=false
+for arg in $*
+do
+	if [ @"$arg"@ = @-reuse@ ]
+	then
+		starter=false
+	fi
+	
+	if [ @"$arg"@ = @-newkey@ ]
+	then
+		newkey=true
+	fi
+done
+
+if [ @"$RCVR_LICENSE_KEY"@ = "@@" -o $newkey = true ]
+then
+	echo -n "License key:"
+	read key
+	if [ @"$key"@ = "@@" ]
+	then
+		key=none
+	fi
+	export RCVR_LICENSE_KEY="$key"
+	ed $HOME/.rcvr_cfg/rcvr_start_params >/dev/null 2>&1 <<!EOF!
+	g/RCVR_LICENSE_KEY/d
+	w
+	q
+!EOF!
+	echo "export RCVR_LICENSE_KEY=$key" >>$HOME/.rcvr_cfg/rcvr_start_params
+fi
+
+rm -f receiver_no_start
+if [ $starter = true ]
+then
+	receiver_start >/dev/null 2>&1
+fi
+
+if [ -f receiver_no_start ]
+then
+	rm -f receiver_no_start
+	exit
+fi
+
+if [ -f rcvr_start_params ]
+then
+	. ./rcvr_start_params
+fi
+
+if [ ! -d $RCVR_DATA_DIR ]
+then
+	mkdir $RCVR_DATA_DIR
+fi
+
+RCVR_SETI_SIZE=$RCVR_BANDWIDTH
+
+decim=`expr 64000000 / $RCVR_SETI_SIZE`
+rate=`expr 64000000 / $decim`
+
+if [ $RCVR_MODE = "interferometer" ]
+then
+	RCVR_MODE="dual"
+fi
+nohup integrated_ra_receiver >/dev/null 2>receiver.log &
+PID=$!
+
+trap 'kill -1 $PID; exit' 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+
+if [ $RCVR_MODE = "single" ]
+then
+
+	integrated_ra_receiver_simmed.py --freq $RCVR_INITIAL_FREQ --gain $RCVR_RF_GAIN --setisize $RCVR_SETI_SIZE \
+		--ratetp $RCVR_TP_RATE --decim $decim --ratepsr $RCVR_PSR_RATE \
+		   >receiver_py.log 2>receiver_py.err
+fi
+if [ $RCVR_MODE = "dual" ]
+then
+	integrated_ra_receiver_simmed.py --freq $RCVR_INITIAL_FREQ --gain $RCVR_RF_GAIN --setisize $RCVR_SETI_SIZE \
+		--ratetp $RCVR_TP_RATE --decim $decim --ratepsr $RCVR_PSR_RATE --g_cor_b $RCVR_COR_B --g_cor_a $RCVR_COR_A >receiver_py.log 2>receiver_py.err
+fi
+

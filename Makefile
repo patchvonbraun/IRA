@@ -30,9 +30,12 @@ clean:
 	rm -f variables.dump
 	
 integrated_ra_receiver: $(OBJS)
+	$(CC) -o integrated_ra_receiver $(OBJS) $(LDFLAGS)
 integrated_ra_receiver_main.o: integrated_ra_receiver_main.c version.h
 receiver_start: $(SOBJS)
+	$(CC) -o receiver_start $(SOBJS) $(LDFLAGS)
 dtracker: $(TOBJS)
+	$(CC) -o dtracker $(TOBJS) $(LDFLAGS)
 version:
 	echo "#define VERSION " \"`date +%Y%m%d-%H:%M:%S`-`uname -m`\" >version.h
 uhd_ra_receiver_new.py: uhd_ra_receiver_new.grc
